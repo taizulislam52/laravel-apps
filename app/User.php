@@ -63,4 +63,8 @@ protected static function boot(){
     {
         return $this->hasMany(\App\Post::class)->orderBy('created_at','DESC');
     }
+    public function getRouteKeyName()
+    {
+        return 'username'; //this will return user name as route
+    }
 }

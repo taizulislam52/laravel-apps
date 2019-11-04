@@ -10,7 +10,7 @@
                 </div>
                 <div>
                     <p class="mb-0">
-                        <a href="/profile/{{auth()->user()->id}}"> {{auth()->user()->username}}</a>
+                        <a href="/profile/{{auth()->user()->username}}"> {{auth()->user()->username}}</a>
 
                     </p>
                     <p class="mt-1">{{auth()->user()->name}}</p>
@@ -27,28 +27,20 @@
                                 <img src="/storage/{{$post->user->profile->image}}" alt="" class="mh-100 rounded-circle" style="height: 50px">
                             </div>
                             <div>
-                                <p class="mb-0 "><span class="font-weight-bold"><a href="/profile/{{$post->user->id}}"
+                                <p class="mb-0 "><span class="font-weight-bold"><a href="/profile/{{$post->user->username}}"
                                                                                    style="color: #003569;">{{$post->user->username}}</a></span></p>
                                 <p class="mt-0">{{$post->caption}}</p>
                             </div>
                             </div>
                         </div>
                         <div class="card-img">
-                            <a href="/profile/{{$post->user->id}}">
+                            <a href="/profile/{{$post->user->username}}">
                                 <img src="/storage/{{$post->image}}" alt="" class="w-100">
                             </a>
                         </div>
 
                         <div class="card-body"></div>
                     </div>
-                </div>
-            </div>
-
-             <div class="row pb-3">
-                <div class="col-5 offset-3 bg-white">
-                    <p><span class="font-weight-bold"><a href="/profile/{{$post->user->id}}"
-                                                         style="color: #003569;">{{$post->user->username}}</a></span> {{$post->caption}}
-                    </p>
                 </div>
             </div>
         @endforeach
